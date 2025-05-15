@@ -1,0 +1,668 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#move{
+    height: 120vh;
+    position: absolute;
+    top: 248vh;
+    left: -30.5vw;
+    transform: rotateX(180deg) rotate(10deg);
+}
+
+.form_submitted{
+    position: absolute;
+    top: 497vh;
+    z-index: 11;
+    right: -25vw;
+    height: 6vh;
+    width: 25vw;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: 350ms;
+}
+
+.form_submitted svg{
+    margin-left: 1rem;
+}
+
+.form_submitted h1{
+    font-size: 1rem;
+    margin-left: 1rem;
+    font-weight: 100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Hind Siliguri", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    height: 15vh;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+    opacity: 1;
+}
+
+ul {
+    list-style: none;
+    width: 70vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.589);
+}
+
+li {
+    margin: 2rem;
+    cursor: pointer;
+    height: 40px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    padding: .5rem;
+}
+.border{
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.589);
+    border-radius: 50px;
+}
+
+nav ul li a {
+    width: 130px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: inherit;
+    margin-top: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+#nav-btn {
+    height: 40px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: #f92a56;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+.container {
+    margin-top: 15vh;
+    height: 85vh;
+    width: 100vw;
+    background-color: rgba(243, 243, 243, 0.459);
+    display: flex;
+}
+
+.left {
+    height: 85vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    height: 85vh;
+    width: 50vw;
+    position: relative;
+}
+
+.right .image_hero {
+    background-image: url('./images/hero_image.png');
+    background-size: cover;
+    height: 101vh;
+    width: 82vw;
+    position: absolute;
+    top: -3vh;
+    right: -10vw;
+    background-repeat: no-repeat;
+}
+
+.text {
+    width: 45vw;
+    margin-left: 3rem;
+}
+
+.text h1 {
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.text p {
+    font-weight: 200;
+}
+
+/* Offers Section */
+.offers {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.offers h1 {
+    margin-top: 1.1rem;
+    font-weight: 500;
+    font-size: 2.5rem;
+    opacity: 0;
+    animation: h1-animation linear forwards;
+    animation-timeline: view(400px 50px);
+}
+
+@keyframes h1-animation {
+    to {
+        opacity: 1;
+    }
+}
+
+.offers p {
+    font-weight: 100;
+    width: 24vw;
+}
+
+.cards {
+    display: flex;
+}
+
+.card {
+    margin: 0rem 2rem;
+}
+
+.card h1 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+/* Services Section */
+.services {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(245, 245, 245, 0.562);
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    position: relative;
+    border-bottom: .1px solid lightgray;
+}
+
+.service_class {
+    position: absolute;
+    right: 4vw;
+    top: 15vh;
+}
+
+.coffee_pack {
+    height: 80vh;
+    left: 8vw;
+    border-radius: 2px;
+    width: 30vw;
+    position: absolute;
+    top: 17vh;
+    background-image: url("./images/pack.jpeg");
+    background-size: cover;
+}
+
+.sr_box {
+    height: 17vh;
+    width: 3vw;
+    background-color: white;
+    border-right: 1px solid gainsboro;
+    color: #f92a2aaf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 200;
+    font-size: 1.5rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px;
+}
+
+.services #main {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.795);
+}
+
+.service {
+    display: flex;
+    width: 49.5vw;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    height: 17vh;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color transform 300ms;
+    animation: slide-in linear forwards;
+    animation-timeline: view(620px -820px);
+}
+
+.text-flash:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+.text-flash {
+    transition: 300ms;
+    width: 41.5vw;
+}
+
+@keyframes slide-in {
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.service .title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
+.service p {
+    font-weight: 100;
+    width: 60vw;
+    margin-left: 1rem;
+}
+
+.service .image {
+    height: 12vh;
+    width: 6vw;
+    margin-left: 1rem;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 0.521);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Testimonials Section */
+#testi {
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.testimonials {
+    height: 40vh;
+    width: 200vw;
+    display: flex;
+    align-items: cetner;
+    flex-wrap: nowrap;
+    border-bottom: .1px solid lightgray;
+}
+
+.testimonials_section{
+    display: flex;
+    width: fit-content;
+    transform: translateX(-42.97%);
+    animation: translate linear 60s infinite;
+}
+
+.testimonial {
+    width: 25vw;
+    height: 35vh;
+    background-color: rgb(250, 250, 250);
+    font-weight: 100;
+    border-radius: 5px;
+    margin: 2rem;
+}
+
+@keyframes translate {
+    from{
+        transform: translateX(-42.97%);
+    }
+    to {
+        transform: translateX(-9.6%);
+    }
+}
+
+.testimonial .pfp {
+    height: 5vh;
+    width: 2.45vw;
+    border-radius: 50px;
+    background-color: rgb(228, 228, 228);
+    background-size: cover;
+    margin: 1rem;
+}
+
+.testimonial .info {
+    display: flex;
+}
+
+.testimonial .info h2 {
+    margin-top: 1rem;
+}
+
+.testimonial p {
+    margin-left: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.contact .left {
+    width: 30vw;
+    height: 100vh;
+    background-image: url('./images/coffee_2.jpg');
+    background-size: cover;
+    filter: contrast(110%) grayscale(100%) saturate(250%);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-shadow: 0px 0px .5px black;
+}
+
+.contact .left .contact_us,
+.contact .left .contact_number,
+.locations {
+    position: absolute;
+    font-weight: 500;
+    width: 25vw;
+    color: white;
+}
+
+.contact .left .contact_us {
+    top: 20vh;
+}
+
+.contact .left .contact_number {
+    top: 38vh;
+    margin-top: 3rem;
+}
+
+.contact .left .contact_number h3 {
+    color: rgb(243, 243, 243);
+}
+
+.contact .left .contact_number p {
+    color: whitesmoke;
+}
+
+.locations {
+    top: 58vh;
+    margin-top: 3rem;
+    color: rgb(247, 247, 247);
+}
+
+.locations h3 {
+    font-weight: 500;
+}
+
+.social_media {
+    top: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 7vw;
+    margin-right: 19vw;
+    margin-top: 2rem;
+}
+
+.circles {
+    height: 40vh;
+    width: 20vw;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.circles .c_1 {
+    position: absolute;
+    height: 40vh;
+    border-radius: 100%;
+    bottom: -80px;
+    right: -80px;
+    opacity: .5;
+    aspect-ratio: 1;
+    background-color: red;
+}
+
+.circles .c_2 {
+    position: absolute;
+    height: 20vh;
+    border-radius: 100%;
+    top: 30px;
+    left: 30px;
+    opacity: .2;
+    aspect-ratio: 1;
+    background-color: red;
+}
+
+.contact .right {
+    height: 100vh;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+}
+
+.contact .right .form form .name,
+.contact .right .form form .email_phone {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.contact .right .form form .name input,
+.contact .right .form form .email_phone input,
+.location #locations {
+    outline: none;
+    height: 8vh;
+    width: 28vw;
+    border: 2px solid gainsboro;
+    border-radius: 5px;
+    padding: .5rem;
+    font-weight: 300;
+    font-size: 1.01rem;
+    margin: 0 1rem;
+}
+
+.contact .right .form form .name label,
+.contact .right .form form .email_phone label,
+.contact .right .form form .location label {
+    margin: 0 1.1rem;
+    color: rgba(71, 71, 71, 0.705);
+    font-size: 1.1rem;
+}
+
+.location {
+    margin-top: 3rem;
+}
+
+.checkbox {
+    margin-top: 3rem;
+    margin-left: 1rem;
+    height: 5vh;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox label {
+    margin-left: .5rem;
+}
+
+#contactBtn {
+    height: 7vh;
+    width: 15vw;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #f92a56;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 150ms;
+}
+
+#contactBtn:hover {
+    transform: scale(1.05);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.603);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(85, 85, 85, 0.562);
+}
+
+#firstNameSmall,
+#lastNameSmall,
+#emailSmall,
+#phoneSmall {
+    opacity: 0;
+    margin-left: 1.2rem;
+    color: #f92a56;
+    font-weight: 100;
+}
+
+.slider-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(245, 245, 245, 0.63);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    right: 0;
+}
+
+.slider-container h1{
+    color: black;
+    font-size: 3.4rem;
+    position: absolute;
+    top: 1rem;
+    font-family: "Hind Siliguri", sans-serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.slider-section{
+    height: 90vh;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(37.7%);
+    animation: left-slider 150s linear infinite;
+}
+
+@keyframes left-slider {
+    from{
+        transform: translateX(37.7%);
+    }
+    to{
+        transform: translateX(-22.3%);
+    }
+}
+
+.img-1{
+    border-radius: 10px;
+    height: 80vh;
+    width: 80vw;
+    margin: 0rem 3rem;
+    background-image: url('./images/slider.jpg');
+    background-size: cover;
+}
+
+.img-2{
+    border-radius: 10px;
+    height: 80vh;
+    width: 80vw;
+    margin: 0rem 3rem;
+    background-image: url('./images/slider_1.jpg');
+    background-size: cover;
+}
+
+.img-3{
+    border-radius: 10px;
+    height: 80vh;
+    width: 80vw;
+    margin: 0rem 3rem;
+    background-image: url('./images/slider_3.jpg');
+    background-size: cover;
+}
+
+.img-4{
+    border-radius: 10px;
+    height: 80vh;
+    width: 80vw;
+    margin: 0rem 3rem;
+    background-image: url('./images/slider.jpg');
+    background-size: cover;
+}
+
+.img-5{
+    border-radius: 10px;
+    height: 80vh;
+    width: 80vw;
+    margin: 0rem 3rem;
+    background-image: url('./images/slider_1.jpg');
+    background-size: cover;
+}
+
+/* Responsive Design Starts Here! */

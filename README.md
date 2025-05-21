@@ -17,7 +17,7 @@ A sleek and responsive landing page for a coffee business. Designed with a clean
 ## 🛠️ Tech Stack
 
 - **HTML5** – Semantic and clean structure
-- **CSS3** – Flexbox and responsive layout
+- **CSS3** – Flexbox and a responsive layout
 - **JavaScript** – Interactive elements
 
 

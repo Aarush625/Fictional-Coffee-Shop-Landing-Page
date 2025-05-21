@@ -38,7 +38,6 @@ To run locally:
 
 ```bash
 git clone https://github.com/Aarush625/Fictional-Coffee-Shop-Landing-Page.git
-cd coffee-website
 open index.html
 
 
